@@ -5,7 +5,8 @@ phases:
     commands:
   build:
     commands:
-      - npm test
+      - aws iam delete-policy --policy-arn arn:aws:iam::121802605768:policy/s3-all-read-cli
+      - aws iam create-policy --policy-name s3-all-read-cli --policy-document file://s3-bucket-policy.json 
 artifacts:
   files:
     - '**/*'
