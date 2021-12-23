@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-east-2:320034660068:*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:us-east-2:320034660068:log-group:/aws/lambda/mm-create-auth-challange:*",
+                "arn:aws:logs:us-east-2:320034660068:log-group:/aws/lambda/mm-define-auth-challange:*",
+                "arn:aws:logs:us-east-2:320034660068:log-group:/aws/lambda/mm-pre-auth-trigger:*",
+                "arn:aws:logs:us-east-2:320034660068:log-group:/aws/lambda/mm-pre-sign-up:*",
+                "arn:aws:logs:us-east-2:320034660068:log-group:/aws/lambda/mm-verify-auth-challange:*"
+            ]
+        }
+    ]
+}
